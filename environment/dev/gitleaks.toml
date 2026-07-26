@@ -1,0 +1,7 @@
+[[rules]]
+id = "terraform-hardcoded-password"
+description = "Detect hardcoded Terraform passwords"
+
+regex = '''(?i)(password|secret|client_secret|access_key|api_key)\s*=\s*["'][^"']+["']'''
+
+tags = ["terraform", "password"]
