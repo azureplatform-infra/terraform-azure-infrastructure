@@ -1,3 +1,9 @@
+module "azurerm_resource_subnet" {
+  for_each = var.subnets
+  source   = "./module/azurerm_resource_subnet"
+  subnets  = var.subnets
+}
+
 data "azurerm_subnet" "subnet" {
   for_each = var.vms
 
